@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: 0;
+}
+
+html {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  width: 60%;
+  height: 100%;
+}
+
+@media screen and (max-width: 878px) {
+  body::after {
+    width: 100%;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left top, right top, from(#f8bfbf), to(#ee8c8c));
+  background: linear-gradient(to right, #f8bfbf, #ee8c8c);
+}
+
+.left {
+  padding: 50px 100px;
+  width: 60%;
+}
+
+.left > * {
+  max-width: 85%;
+}
+
+.left .mobile__hero {
+  display: none;
+}
+
+.left h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 13px;
+  padding-top: 120px;
+}
+
+.left h1 span {
+  color: #ce9797;
+  font-weight: 300;
+}
+
+.left p {
+  color: #ce9797;
+  font-weight: 600;
+  line-height: 1.5;
+  padding-bottom: 50px;
+}
+
+.left .form {
+  position: relative;
+  max-width: 485px;
+}
+
+.left .form input {
+  height: 45px;
+  width: 100%;
+  border: 0.5px solid #ce9797;
+  border-radius: 100px;
+  padding: 4px 0 0 20px;
+  font-family: inherit;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.left .form input::-webkit-input-placeholder {
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+.left .form input:-ms-input-placeholder {
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+.left .form input::-ms-input-placeholder {
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+.left .form input::placeholder {
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+.left .form .exclamation {
+  position: absolute;
+  top: 10.5px;
+  right: 22%;
+  visibility: hidden;
+}
+
+.left .form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 45px;
+  width: 18%;
+  min-width: 70px;
+  border: none;
+  border-radius: 100px;
+  background-color: #ce9797;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  cursor: pointer;
+}
+
+.left .form button:hover {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}
+
+.left .form small {
+  color: #f96262;
+  font-weight: 700;
+  padding-left: 25px;
+}
+
+.left .form.error input {
+  border: 1px solid #f96262;
+}
+
+.left .form.error .exclamation {
+  visibility: visible;
+}
+
+.left .form.success input {
+  border: 1px solid #8cc593;
+}
+
+.left .form.success small {
+  color: #8cc593;
+}
+
+@media screen and (max-width: 878px) {
+  .left {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+  .left h1 {
+    padding-top: 60px;
+    text-align: center;
+  }
+  .left p {
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .left > * {
+    max-width: 100%;
+  }
+  .left .form {
+    margin: 0 auto;
+  }
+  .left .mobile__hero {
+    display: block;
+    padding-top: 30px;
+  }
+  .left .mobile__hero img {
+    width: 100vw;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .left h1 {
+    font-size: 3.4rem;
+  }
+  .left p {
+    font-weight: normal;
+  }
+}
+
+.right {
+  position: fixed;
+  right: 0;
+  background-image: url(/images/hero-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 40%;
+}
+
+@media screen and (max-width: 878px) {
+  .right {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */
